@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thi thực hành 4-OOP</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="500" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+
+class  Circle{
+    constructor(x,y,radius,color) {
+        this.x=x;
+        this.y=y;
+        this.radius=radius;
+        this.color=color;
+    }
+    reder(Canvas){
+        let c = document.getElementById(Canvas);
+        let ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(this.x,this.y,this.radius,0,2*Math.PI);
+        ctx.strokeStyle= this.color;
+        ctx.stroke();
+    }
+}
+//demo
+let circle= new Circle(10,10,100,"#000000");
+circle.reder("myCanvas")
+
+</script>
+</body>
+</html>

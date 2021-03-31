@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thi thực hành- Xóa phần tử trong mảng</title>
+</head>
+<body>
+<script>
+    let arr=[1,2,3];
+    function tryRemoveFromArray(arr,x){
+        for(let i=0;i<arr.length;i++){
+            if(arr[i] === x){
+                arr.splice(i,1);
+            }
+        }
+        return arr;
+    }
+//demo
+    let x=1;
+    console.log(tryRemoveFromArray(arr,x));
+</script>
+</body>
+</html>

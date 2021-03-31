@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài thi thực hành 3-True Flash</title>
+</head>
+<body>
+<script>
+
+    function isFibonacci(x) {
+        let a = 0;
+        let b = 1;
+        let f;
+        let check = true;
+        while (check === true) {
+            f = a + b;
+            a = b;
+            b = f;
+            if (x === b || x === 0) {
+                return true;
+            } else if (b > x && x !== b) {
+                return false;
+            }
+        }
+    }
+let x=5;
+    console.log(isFibonacci(x));
+</script>
+</body>
+</html>
